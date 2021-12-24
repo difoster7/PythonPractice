@@ -19,3 +19,7 @@ if pali:
 else:
     print(in_str + " is not a palindrome!")
 
+
+# for i in range(len(in_str)//2):
+#     if in_str[i] != in_str[len(in_str) - i - 1]:
+#         pali = False

@@ -8,13 +8,14 @@ def get_int(text="Please enter an integer: "):
 
 
 def fib(stop_len, fib_seq=[1]):
-    print(fib_seq)
     if len(fib_seq) == stop_len:
         return fib_seq
     elif len(fib_seq) == 1:
-        return fib(stop_len, fib_seq.append(1))
+        fib_seq.append(1)
+        return fib(stop_len, fib_seq)
     else:
-        return fib(stop_len, fib_seq.append(fib_seq[len(fib_seq) - 2] + fib_seq[len(fib_seq) - 1]))
+        fib_seq.append(fib_seq[len(fib_seq) - 2] + fib_seq[len(fib_seq) - 1])
+        return fib(stop_len, fib_seq)
 
 
 fib_len = get_int("Enter the number of Fibonacci digits to generate: ")
